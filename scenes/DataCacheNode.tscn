@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/DataCacheNode.gd" type="Script" id=1]
+[ext_resource path="res://Assets/data-blue.png" type="Texture" id=2]
+
+[node name="DataCacheNode" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+firewall = 0
+authority = 0
+overwatch = 0
+name = ""
+
+[node name="Icon" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://FrameOption.gd" type="Script" id=1]
+[ext_resource path="res://Assets/arrow-37-24.png" type="Texture" id=2]
+
+[node name="FrameOption" type="Control"]
+margin_right = 443.0
+margin_bottom = 35.0
+script = ExtResource( 1 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 446.0
+margin_bottom = 36.0
+
+[node name="indicator" type="Sprite" parent="."]
+visible = false
+position = Vector2( 429, 17 )
+rotation = -3.14159
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="optionText" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 3.0
+margin_right = 435.0
+margin_bottom = 33.0
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+text = "This is the prompt which will be responded to"
+valign = 1
+
+[connection signal="gui_input" from="optionText" to="." method="_on_optionText_gui_input"]
+[connection signal="mouse_entered" from="optionText" to="." method="_on_optionText_mouse_entered"]
+[connection signal="mouse_exited" from="optionText" to="." method="_on_optionText_mouse_exited"]
