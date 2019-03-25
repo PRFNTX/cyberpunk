@@ -1,22 +1,28 @@
 extends Node2D
 
-export(String) var frameName = 'Mr. Text Robot'
-export(Array, String) var textArray = ['enter text here', 'this is text number 2']
+var frameName = ""
+var textArray
 var current = 0
 var next = false
-onready var last = textArray.size()
 var onComplete = null
 
 func _ready():
+	set_process(false)
+	set_process_input(false)
+
+func init():
 	$textDisplay.text = ""
 	$Name.text = frameName
 	set_process(false)
+	set_process_input(false)
 
 func pause():
 	set_process(false)
+	set_process_input(false)
 
 func start():
 	set_process(true)
+	set_process_input(true)
 
 func setOnComplete(_onComplete = null):
 	onComplete = _onComplete
@@ -36,6 +42,7 @@ func _input(event):
 		if advanceReady:
 			advance()
 		else:
+			print(textArray)
 			charsShown = textArray[current].length() - 1
 
 var textRate = 0.08 #chars/s

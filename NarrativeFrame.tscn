@@ -3,9 +3,9 @@
 [ext_resource path="res://NarrativeFrame.gd" type="Script" id=1]
 [ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_drow_warrior_female.png" type="Texture" id=2]
 [ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_Dwarven_healer_female.png" type="Texture" id=3]
-[ext_resource path="res://FrameText.tscn" type="PackedScene" id=4]
-[ext_resource path="res://FrameOptions.tscn" type="PackedScene" id=5]
-[ext_resource path="res://FrameOption.tscn" type="PackedScene" id=6]
+[ext_resource path="res://FrameText.gd" type="Script" id=4]
+[ext_resource path="res://Assets/arrow-37-24.png" type="Texture" id=5]
+[ext_resource path="res://Assets/star-2-24.png" type="Texture" id=6]
 
 [node name="NarrativeFrame" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,27 +22,52 @@ position = Vector2( 778.689, 261.958 )
 scale = Vector2( -0.2, 0.2 )
 texture = ExtResource( 3 )
 
-[node name="FrameText" parent="." instance=ExtResource( 4 )]
+[node name="FrameText" type="Node2D" parent="."]
 visible = false
 position = Vector2( 286.395, 390.929 )
-textArray = [ "enter text here", "this is text number 2", "i can add a third and make it a bit longer if i want", "... (so edgy)" ]
+z_index = 2
+script = ExtResource( 4 )
 
-[node name="FrameOptions" parent="." instance=ExtResource( 5 )]
+[node name="PanelContainer" type="PanelContainer" parent="FrameText"]
+margin_right = 450.0
+margin_bottom = 156.0
+
+[node name="Name" type="Label" parent="FrameText"]
+margin_left = 9.0
+margin_top = 8.0
+margin_right = 232.0
+margin_bottom = 31.0
+
+[node name="textDisplay" type="Label" parent="FrameText"]
+margin_left = 18.0
+margin_top = 38.0
+margin_right = 425.0
+margin_bottom = 134.0
+
+[node name="nextReady" type="Sprite" parent="FrameText"]
+visible = false
+position = Vector2( 430.947, 139.766 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="completeReady" type="Sprite" parent="FrameText"]
+visible = false
+position = Vector2( 430.947, 139.766 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="FrameOptions" type="Node2D" parent="."]
 visible = false
 position = Vector2( 286.395, 390.929 )
-prompt = "Prompt goes here. Are they edgy?"
-optionId = "isEdgy"
-options = [ {
-"flag": "yes",
-"id": "edgy",
-"next": null,
-"text": "wow, so edgy"
-}, {
-"flag": "no",
-"text": "I've seen edgier"
-}, {
-"flag": "edge",
-"text": "..."
-} ]
-optionScene = ExtResource( 6 )
+z_index = 2
+
+[node name="Prompt" type="Label" parent="FrameOptions"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 448.0
+margin_bottom = 40.0
+text = "This is the prompt which will be responded to"
+
+[node name="options" type="Node2D" parent="FrameOptions"]
+position = Vector2( 27, 40 )
 

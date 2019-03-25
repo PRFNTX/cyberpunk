@@ -1,14 +1,9 @@
 extends Node2D
 
-export(String) var prompt = "Prompt goes here"
-export(String) var optionId = ""
-export(Array, Dictionary) var options = [
-	{
-		'text': 'I accept',
-		'flag': 'accept',
-	},
-]
-export(PackedScene) var optionScene = load('res://FrameOptions.gd')
+var prompt = "Prompt goes here"
+var optionId = ""
+var options = []
+var optionScene = load('res://FrameOptions.gd')
 var onComplete = null
 
 func _ready():
