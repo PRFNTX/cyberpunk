@@ -43,6 +43,7 @@ margin_left = 18.0
 margin_top = 38.0
 margin_right = 425.0
 margin_bottom = 134.0
+autowrap = true
 
 [node name="nextReady" type="Sprite" parent="FrameText"]
 visible = false

@@ -76,7 +76,6 @@ func _initSprites():
 ## TEXT FUNCS
 
 func _initText():
-	print(textArray)
 	if hasText:
 		$FrameText.frameName = frameName
 		$FrameText.textArray = textArray

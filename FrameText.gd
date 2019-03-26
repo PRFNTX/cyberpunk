@@ -6,6 +6,18 @@ var current = 0
 var next = false
 var onComplete = null
 
+func reset():
+	textArray = []
+	frameName = ""
+	current = 0
+	next = false
+	onComplete = null
+	textCounter = 0.0
+	charsShown = 0
+	charsToShow = 0
+	advanceReady = false
+	$textDisplay.text = ""
+
 func _ready():
 	set_process(false)
 	set_process_input(false)
@@ -42,7 +54,6 @@ func _input(event):
 		if advanceReady:
 			advance()
 		else:
-			print(textArray)
 			charsShown = textArray[current].length() - 1
 
 var textRate = 0.08 #chars/s
