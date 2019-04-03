@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://RigPart.gd" type="Script" id=1]
+[ext_resource path="res://Assets/data-blue.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 207.671, 177.069 )
+
+[node name="RigPart" type="Node2D"]
+scale = Vector2( 0.15, 0.15 )
+script = ExtResource( 1 )
+image = ExtResource( 2 )
+polygonNode = NodePath("Area2D")
+
+[node name="image" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+

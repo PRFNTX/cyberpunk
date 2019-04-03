@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ExplorableScene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_Forest_Keeper_bg.png" type="Texture" id=2]
+[ext_resource path="res://FrameText.tscn" type="PackedScene" id=3]
+
+[node name="ExplorableFrame" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 1110.35, -850.789 )
+texture = ExtResource( 2 )
+
+[node name="FrameText" parent="." instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 292, 429 )
+
+[node name="placedObjects" type="Node2D" parent="."]
+

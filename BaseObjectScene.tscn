@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BaseObjectScene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/process-grred.png" type="Texture" id=2]
+
+[node name="BaseObjectScene" type="Node2D"]
+script = ExtResource( 1 )
+image = ExtResource( 2 )
+
+[node name="sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="clickable" type="Area2D" parent="."]
+
+[node name="shape" type="CollisionPolygon2D" parent="clickable"]
+polygon = PoolVector2Array( -86.1358, -89.7508, -44.0418, -124.658, 17.5593, -131.845, 78.647, -94.8843, 110.988, -31.2298, 109.448, 44.7448, 77.6203, 105.833, 22.1794, 132.526, -35.315, 126.366, -82.5424, 85.8122, -106.156, 32.9379, -112.316, -31.7432 )
+
+[connection signal="input_event" from="clickable" to="." method="_on_clickable_input_event"]

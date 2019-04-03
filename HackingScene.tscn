@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://HackingScene.gd" type="Script" id=1]
+[ext_resource path="res://systemNode.tscn" type="PackedScene" id=2]
+
+[node name="HackingScene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="user" parent="." instance=ExtResource( 2 )]
+priviledges = 1
+
+[node name="admin" parent="user" instance=ExtResource( 2 )]
+position = Vector2( -187, 84 )
+priviledges = 2
+
+[node name="root" parent="user/admin" instance=ExtResource( 2 )]
+position = Vector2( -178, 298 )
+priviledges = 2
+
+[node name="process1r" parent="user/admin/root" instance=ExtResource( 2 )]
+position = Vector2( 193, 198 )
+priviledges = 3
+type = 2
+encryption = 1
+
+[node name="process2r" parent="user/admin/root" instance=ExtResource( 2 )]
+position = Vector2( 193, 299 )
+priviledges = 3
+type = 2
+encryption = 2
+
+[node name="dir1r" parent="user/admin/root" instance=ExtResource( 2 )]
+position = Vector2( 193, 3 )
+priviledges = 3
+encryption = 3
+
+[node name="cache1r" parent="user/admin/root/dir1r" instance=ExtResource( 2 )]
+position = Vector2( 166, 4 )
+priviledges = 3
+type = 1
+encryption = 4
+
+[node name="dir1r2" parent="user/admin/root" instance=ExtResource( 2 )]
+position = Vector2( 192, 92 )
+priviledges = 3
+encryption = 3
+
+[node name="cache1r" parent="user/admin/root/dir1r2" instance=ExtResource( 2 )]
+position = Vector2( 166, 4 )
+priviledges = 3
+type = 1
+encryption = 4
+
+[node name="process1a" parent="user/admin" instance=ExtResource( 2 )]
+position = Vector2( 188, 7 )
+priviledges = 2
+type = 2
+
+[node name="process2a" parent="user/admin" instance=ExtResource( 2 )]
+position = Vector2( 186, 99 )
+priviledges = 2
+type = 2
+
+[node name="dir1a" parent="user/admin" instance=ExtResource( 2 )]
+position = Vector2( 189, 189 )
+priviledges = 2
+encryption = 1
+
+[node name="cache1a" parent="user/admin/dir1a" instance=ExtResource( 2 )]
+position = Vector2( 166, 4 )
+priviledges = 2
+type = 1
+
+[node name="dir" parent="user" instance=ExtResource( 2 )]
+position = Vector2( 168, -1 )
+priviledges = 1
+
+[node name="cache" parent="user/dir" instance=ExtResource( 2 )]
+position = Vector2( 160, 0 )
+priviledges = 1
+type = 1
+
+[node name="process" parent="user/dir" instance=ExtResource( 2 )]
+position = Vector2( 161, 95 )
+priviledges = 1
+type = 2
+

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ProgramSlot.gd" type="Script" id=1]
+[ext_resource path="res://Assets/data-blue.png" type="Texture" id=2]
+
+[node name="ProgramSlot" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="selected" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0.143893, 0.143779 )
+scale = Vector2( 0.995536, 0.995529 )
+polygon = PoolVector2Array( -1.48527, -1.41668, 33.3907, -1.41668, 33.3907, 33.2077, -1.48527, 33.2077 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 16.1075, 16.0194 )
+scale = Vector2( 0.062264, 0.0619196 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[connection signal="gui_input" from="Panel" to="." method="_on_Panel_gui_input"]

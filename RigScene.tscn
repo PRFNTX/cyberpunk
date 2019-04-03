@@ -1,0 +1,344 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://RigScene.gd" type="Script" id=1]
+[ext_resource path="res://Assets/process-blue2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/process-green.png" type="Texture" id=3]
+[ext_resource path="res://Assets/process-grred.png" type="Texture" id=4]
+[ext_resource path="res://Assets/process.png" type="Texture" id=5]
+[ext_resource path="res://Assets/data-blue.png" type="Texture" id=6]
+[ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_ghost.png" type="Texture" id=7]
+[ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_stone_spirit.png" type="Texture" id=8]
+[ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_toad.png" type="Texture" id=9]
+[ext_resource path="res://Assets/fantasy portraits/FantasyCharacters_orc_shaman.png" type="Texture" id=10]
+
+[node name="RigScene" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Threads" type="Node2D" parent="."]
+position = Vector2( 220, 222.703 )
+
+[node name="Panel1" type="Panel" parent="Threads"]
+margin_left = -117.895
+margin_top = 178.947
+margin_right = -21.8947
+margin_bottom = 274.947
+
+[node name="selected" type="Polygon2D" parent="Threads/Panel1"]
+visible = false
+position = Vector2( 0.190163, 1.13052 )
+scale = Vector2( 0.998039, 0.984345 )
+z_index = -1
+polygon = PoolVector2Array( -1.42568, -2.0274, 96.7858, -2.0274, 96.9795, 96.959, -1.8131, 96.959 )
+
+[node name="image" type="Sprite" parent="Threads/Panel1"]
+position = Vector2( 48.1938, 47.3136 )
+scale = Vector2( 0.372476, 0.365599 )
+texture = ExtResource( 2 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Threads/Panel1"]
+margin_top = 82.4231
+margin_right = 96.0
+margin_bottom = 96.4231
+
+[node name="Panel2" type="Panel" parent="Threads"]
+margin_left = -14.7368
+margin_top = 178.947
+margin_right = 81.2632
+margin_bottom = 274.947
+
+[node name="selected" type="Polygon2D" parent="Threads/Panel2"]
+visible = false
+position = Vector2( 0.279968, 1.13052 )
+scale = Vector2( 0.998039, 0.984345 )
+z_index = -1
+polygon = PoolVector2Array( -1.42568, -2.0274, 96.7858, -2.0274, 96.9795, 96.959, -1.8131, 96.959 )
+
+[node name="image" type="Sprite" parent="Threads/Panel2"]
+position = Vector2( 48.0255, 47.3136 )
+scale = Vector2( 0.372476, 0.365599 )
+texture = ExtResource( 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Threads/Panel2"]
+margin_left = -0.232239
+margin_top = 82.4232
+margin_right = 95.7678
+margin_bottom = 96.4232
+
+[node name="Panel3" type="Panel" parent="Threads"]
+margin_left = 89.4735
+margin_top = 178.947
+margin_right = 185.474
+margin_bottom = 274.947
+
+[node name="selected" type="Polygon2D" parent="Threads/Panel3"]
+visible = false
+position = Vector2( 0.0924988, 1.13052 )
+scale = Vector2( 0.998039, 0.984345 )
+z_index = -1
+polygon = PoolVector2Array( -1.42568, -2.0274, 96.7858, -2.0274, 96.9795, 96.959, -1.8131, 96.959 )
+
+[node name="image" type="Sprite" parent="Threads/Panel3"]
+position = Vector2( 47.2448, 47.3136 )
+scale = Vector2( 0.372476, 0.365599 )
+texture = ExtResource( 4 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Threads/Panel3"]
+margin_left = -0.287567
+margin_top = 82.1158
+margin_right = 95.7124
+margin_bottom = 96.1158
+
+[node name="Panel4" type="Panel" parent="Threads"]
+margin_left = 193.684
+margin_top = 178.947
+margin_right = 289.684
+margin_bottom = 274.947
+
+[node name="selected" type="Polygon2D" parent="Threads/Panel4"]
+visible = false
+position = Vector2( 0.679688, 1.13052 )
+scale = Vector2( 0.998039, 0.984345 )
+z_index = -1
+polygon = PoolVector2Array( -1.42568, -2.0274, 96.7858, -2.0274, 96.9795, 96.959, -1.8131, 96.959 )
+
+[node name="image" type="Sprite" parent="Threads/Panel4"]
+position = Vector2( 48.2245, 47.3136 )
+scale = Vector2( 0.372476, 0.365599 )
+texture = ExtResource( 5 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Threads/Panel4"]
+margin_left = 0.0809631
+margin_top = 81.8084
+margin_right = 96.081
+margin_bottom = 95.8084
+
+[node name="Programs" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0.000183105, -1.50732 )
+
+[node name="Panel1" type="Panel" parent="Programs"]
+margin_left = 175.789
+margin_top = 512.631
+margin_right = 225.789
+margin_bottom = 562.631
+
+[node name="image2" type="Sprite" parent="Programs/Panel1"]
+position = Vector2( 25.4054, 25.4027 )
+scale = Vector2( 0.192434, 0.1935 )
+texture = ExtResource( 2 )
+
+[node name="Panel2" type="Panel" parent="Programs"]
+margin_left = 234.737
+margin_top = 512.631
+margin_right = 284.737
+margin_bottom = 562.631
+
+[node name="image3" type="Sprite" parent="Programs/Panel2"]
+position = Vector2( 24.9753, 25.4028 )
+scale = Vector2( 0.192434, 0.1935 )
+texture = ExtResource( 3 )
+
+[node name="Panel3" type="Panel" parent="Programs"]
+margin_left = 294.737
+margin_top = 512.631
+margin_right = 344.737
+margin_bottom = 562.631
+
+[node name="image4" type="Sprite" parent="Programs/Panel3"]
+position = Vector2( 25.526, 25.4028 )
+scale = Vector2( 0.192434, 0.1935 )
+texture = ExtResource( 4 )
+
+[node name="Panel4" type="Panel" parent="Programs"]
+margin_left = 352.631
+margin_top = 512.631
+margin_right = 402.631
+margin_bottom = 562.631
+
+[node name="image5" type="Sprite" parent="Programs/Panel4"]
+position = Vector2( 25.4708, 25.4028 )
+scale = Vector2( 0.192434, 0.1935 )
+texture = ExtResource( 5 )
+
+[node name="Panel5" type="Panel" parent="Programs"]
+margin_left = 411.579
+margin_top = 512.631
+margin_right = 461.579
+margin_bottom = 562.631
+
+[node name="image6" type="Sprite" parent="Programs/Panel5"]
+position = Vector2( 25.4126, 25.1109 )
+scale = Vector2( 0.0960549, 0.0954099 )
+texture = ExtResource( 6 )
+
+[node name="Panel6" type="Panel" parent="Programs"]
+margin_left = 471.579
+margin_top = 512.631
+margin_right = 521.578
+margin_bottom = 562.631
+
+[node name="image7" type="Sprite" parent="Programs/Panel6"]
+position = Vector2( 25.723, 25.3806 )
+scale = Vector2( 0.0224854, 0.0171489 )
+texture = ExtResource( 7 )
+
+[node name="Panel7" type="Panel" parent="Programs"]
+margin_left = 531.578
+margin_top = 512.631
+margin_right = 581.578
+margin_bottom = 562.631
+
+[node name="image8" type="Sprite" parent="Programs/Panel7"]
+position = Vector2( 25.4474, 25.4169 )
+scale = Vector2( 0.0223871, 0.0170684 )
+texture = ExtResource( 8 )
+
+[node name="Panel8" type="Panel" parent="Programs"]
+margin_left = 592.631
+margin_top = 512.631
+margin_right = 642.631
+margin_bottom = 562.631
+
+[node name="image9" type="Sprite" parent="Programs/Panel8"]
+position = Vector2( 25.4651, 25.1797 )
+scale = Vector2( 0.0222395, 0.0170512 )
+texture = ExtResource( 9 )
+
+[node name="Panel9" type="Panel" parent="Programs"]
+margin_left = 653.683
+margin_top = 512.631
+margin_right = 703.683
+margin_bottom = 562.631
+
+[node name="image10" type="Sprite" parent="Programs/Panel9"]
+position = Vector2( 25.3132, 25.2951 )
+scale = Vector2( 0.0222567, 0.0169774 )
+texture = ExtResource( 10 )
+
+[node name="Heat" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0.000183105, -1.50732 )
+
+[node name="label" type="Label" parent="Heat"]
+margin_left = 43.9999
+margin_top = 575.999
+margin_right = 83.9999
+margin_bottom = 589.999
+text = "Heat"
+
+[node name="heatBar" type="ProgressBar" parent="Heat"]
+margin_left = 87.9999
+margin_top = 576.999
+margin_right = 967.0
+margin_bottom = 590.999
+min_value = 50.0
+value = 50.0
+percent_visible = false
+
+[node name="Integrity" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0.000183105, -1.50732 )
+
+[node name="label" type="Label" parent="Integrity"]
+margin_left = 722.549
+margin_top = 462.25
+margin_right = 776.549
+margin_bottom = 476.25
+text = "Integrity"
+
+[node name="integrityBar" type="ProgressBar" parent="Integrity"]
+margin_left = 753.287
+margin_top = 481.092
+margin_right = 983.287
+margin_bottom = 507.092
+value = 50.0
+percent_visible = false
+
+[node name="Trace" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0.000183105, -1.50732 )
+
+[node name="label" type="Label" parent="Trace"]
+margin_left = 724.655
+margin_top = 520.144
+margin_right = 764.655
+margin_bottom = 534.144
+text = "Trace"
+
+[node name="traceBar" type="ProgressBar" parent="Trace"]
+margin_left = 752.811
+margin_top = 537.602
+margin_right = 982.811
+margin_bottom = 563.602
+value = 50.0
+percent_visible = false
+
+[node name="ScrollUp" type="Control" parent="."]
+margin_left = 30.0
+margin_top = -2.0
+margin_right = 990.0
+margin_bottom = 18.0
+mouse_filter = 1
+
+[node name="ScrollRight" type="Control" parent="."]
+margin_left = 985.0
+margin_top = 30.0
+margin_right = 1031.0
+margin_bottom = 564.0
+mouse_filter = 1
+
+[node name="ScrollLeft" type="Control" parent="."]
+margin_left = -6.0
+margin_top = 26.0
+margin_right = 37.0
+margin_bottom = 563.0
+mouse_filter = 1
+
+[node name="ScrollDown" type="Control" parent="."]
+margin_left = 18.0
+margin_top = 570.0
+margin_right = 985.0
+margin_bottom = 610.0
+mouse_filter = 1
+
+[node name="target" type="Node2D" parent="."]
+position = Vector2( 523.314, 225.768 )
+
+[node name="d" type="Polygon2D" parent="target"]
+position = Vector2( 0.0121002, -0.437332 )
+rotation = 0.788678
+offset = Vector2( -638.831, -145.782 )
+polygon = PoolVector2Array( 535.213, 154.793, 572.331, 151.944, 572.398, 161.259, 534.607, 158.718 )
+
+[node name="d2" type="Polygon2D" parent="target"]
+position = Vector2( 0.0121002, -0.437332 )
+rotation = -2.31615
+offset = Vector2( -638.831, -145.782 )
+polygon = PoolVector2Array( 535.213, 154.793, 572.331, 151.944, 572.398, 161.259, 534.607, 158.718 )
+
+[node name="d3" type="Polygon2D" parent="target"]
+position = Vector2( 0.0121002, -0.437332 )
+rotation = -3.93595
+scale = Vector2( 1, -1 )
+offset = Vector2( -638.831, -145.782 )
+polygon = PoolVector2Array( 535.213, 154.793, 572.331, 151.944, 572.398, 161.259, 534.607, 158.718 )
+
+[node name="d4" type="Polygon2D" parent="target"]
+position = Vector2( 0.0121002, -0.437332 )
+rotation = -7.07387
+scale = Vector2( 1, -1 )
+offset = Vector2( -638.831, -145.782 )
+polygon = PoolVector2Array( 535.213, 154.793, 572.331, 151.944, 572.398, 161.259, 534.607, 158.718 )
+
+[connection signal="gui_input" from="Threads/Panel1" to="." method="_on_Panel1_gui_input"]
+[connection signal="gui_input" from="Threads/Panel2" to="." method="_on_Panel2_gui_input"]
+[connection signal="gui_input" from="Threads/Panel3" to="." method="_on_Panel3_gui_input"]
+[connection signal="gui_input" from="Threads/Panel4" to="." method="_on_Panel4_gui_input"]
+[connection signal="mouse_entered" from="ScrollUp" to="." method="_on_ScrollUp_mouse_entered"]
+[connection signal="mouse_exited" from="ScrollUp" to="." method="_on_ScrollUp_mouse_exited"]
+[connection signal="mouse_entered" from="ScrollRight" to="." method="_on_ScrollRight_mouse_entered"]
+[connection signal="mouse_exited" from="ScrollRight" to="." method="_on_ScrollRight_mouse_exited"]
+[connection signal="mouse_entered" from="ScrollLeft" to="." method="_on_ScrollLeft_mouse_entered"]
+[connection signal="mouse_exited" from="ScrollLeft" to="." method="_on_ScrollLeft_mouse_exited"]
+[connection signal="mouse_entered" from="ScrollDown" to="." method="_on_ScrollDown_mouse_entered"]
+[connection signal="mouse_exited" from="ScrollDown" to="." method="_on_ScrollDown_mouse_exited"]

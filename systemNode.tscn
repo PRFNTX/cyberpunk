@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://systemNode.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 52.6644, 29.4639 )
+
+[node name="systemNode" type="Node2D"]
+script = ExtResource( 1 )
+encryptionColors = [ Color( 0.0352941, 0.521569, 0.784314, 1 ), Color( 0.227451, 0.764706, 0.00784314, 1 ), Color( 0.796078, 0.839216, 0.0470588, 1 ), Color( 0.92549, 0.294118, 0.0196078, 1 ), Color( 0.85098, 0.00392157, 0.00392157, 1 ) ]
+
+[node name="Local" type="Node2D" parent="."]
+
+[node name="encryption" type="Polygon2D" parent="Local"]
+position = Vector2( 0.390701, 1.20325 )
+scale = Vector2( 1.02751, 0.647122 )
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -52.822, -50.5923, 52.4396, -50.5923, 52.8368, 50.6972, -52.822, 50.6972 )
+
+[node name="Area2D" type="Area2D" parent="Local"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Local/Area2D"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="body" type="Polygon2D" parent="Local"]
+position = Vector2( 0.153743, 1.71131 )
+scale = Vector2( 0.991273, 0.602489 )
+antialiased = true
+polygon = PoolVector2Array( -52.822, -50.5923, 52.4396, -50.5923, 52.8368, 50.6972, -52.822, 50.6972 )
+
+[node name="startLine" type="Position2D" parent="Local"]
+position = Vector2( 51.9433, -28.5842 )
+
+[node name="endLine" type="Position2D" parent="Local"]
+position = Vector2( -51.9433, -28.8915 )
+
+[connection signal="input_event" from="Local/Area2D" to="." method="_on_Area2D_input_event"]
